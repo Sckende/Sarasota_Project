@@ -6,6 +6,7 @@ motion <- read.csv2("Sarasota_28-6-2020_16h43_motion.csv",
                      sep = ",")
 
 #### Here is the test zone ####
+
 head(motion)
 summary(motion)
 
