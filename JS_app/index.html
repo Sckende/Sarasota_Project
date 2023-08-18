@@ -4,17 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
-    <script src="index.css"></script>
+    <title>Sarasota app</title>
+    <!-- Inclusion du fichier css pour le style -->
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
-    <div class="app">
-        <img src="image/horseLogo_transparent.svg" class="appLogo" alt="logo">
-        <h1> Hello Claire!</h1>
-        <p>Bienvenue dans l'application de gestion</p>
-        <p>Your function is <span id='function'>gestionnaire</span>.</p>
+
+<!-- header -->
+<header>
+    <img src="image/horseLogo_transparent.svg" class="appLogo" alt="logo">
+    
+    <!-- message d'accueil -->
+    <h1> Hello Claire!</h1>
+    <p>Bienvenue dans l'application de gestion.</p>
+    <p>Votre rôle est <span id='function'>gestionnaire</span>.</p>
+</header>
+
+<!-- body -->
+<body>   
+    <!-- Test de differents formulaires -->
+   
+    <!-- nom du cheval -->
+    <div class="divNomCheval">
+        <label for="nomCheval">Nom du cheval</label>
+        <input type="text" id="nomCheval" name="nomCheval" value="Sarasota">
     </div>
 
-</body>
+    <!-- date des frais engendrés -->
+    <div class="divDateFrais">
+        <label for="dateFrais">Date</label>
+        <input type="date" id="dateFrais" name="dateFrais" min="2023-01-01">
+    </div>
+
+    <!-- choix de la catégorie des frais -->
+    <div class="divCatFrais">
+        <label for="catFrais" >Choix du type de frais</label>
+        <select id="catFrais" name="catFrais">
+            <option value="Materiels">Matériels</option>
+            <option value="Soins">Soins</option>          
+        
+        </select>
+    </div>
+
+    <div class="divLibelFrais">
+        <label for="libelFrais">Libellé des frais</label>
+        <input type="text" id="libelFrais" name="libelFrais">
+    </div>
+
+    <div class="divTarifFrais">
+        <!-- prix HT -->
+        <label for="tarifFraisHT">Prix HT</label>
+        <input type="number" id="tarifFraisHT" name="tarifFraisHT" value="0">
+        <!-- prix TTC -->
+        <label for="tarifFraisTTC">Prix TTC</label>
+        <input type="number" id="tarifFraisTTC" name="tarifFraisTTC" value="1">
+        <!-- frais réel -->
+        <label for="fraisReel">Frais réel</label>
+        <input type="number" id="fraisReel" name="fraisReel" value="2">
+    </div>
+
+    <div class="divRemarque">
+        <label for="remarque">Remarques Générales</label>
+        <input type="text" id="remarque" name="remarque">
+    </div>
+
+ </body>
 </html>
